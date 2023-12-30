@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;  /* Center-align the content */
+    }
+
+    .premium-heading {
+      background-color: #001F3F; /* Deep blue for heading */
+      color: white;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .button-container {
+      margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .main-button {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .main-button:hover {
+      background-color: #555;
+    }
+
+    .nested-buttons {
+      display: none;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .nested-button {
+      background-color: #ddd;
+      color: #333;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .nested-button:hover {
+      background-color: #ccc;
+    }
+
+    .nested-box {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    .nested-link {
+      display: block;
+      margin: 5px;
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #FFD700; /* Subtle gold for footer */
+      color: #333;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+<div class="premium-heading">
+  <h1>Travel</h1>
+</div>
+
+<!-- Jharkhand -->
+<div class="button-container">
+  <button class="main-button" onclick="toggleNestedButtons(1)">Jharkhand</button>
+  
+  <div class="nested-buttons" id="nestedButtons1">
+
+    <button class="main-button nested-button" onclick="toggleNestedBox(1, 0)">
+      Places
+    </button>
+
+    <div class="nested-box" id="nestedBox1_0">
+
+      <a class="nested-link" href="" target="_blank">Santhal Pragna</a>
+
+      <a class="nested-link" href="" target="_blank">Chota Nagpur</a>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-content">
+    <p class="credit">&#169; 2023 design by <a href="https://rajeshphy.github.io" target="_blank">Rajesh Kumar</a></p>
+  </div>
+</div>
+
+<script>
+  function toggleNestedButtons(buttonNumber) {
+    var nestedButtons = document.getElementById('nestedButtons' + buttonNumber);
+
+    // Toggle the display property
+    if (nestedButtons.style.display === 'none') {
+      nestedButtons.style.display = 'block';
+    } else {
+      nestedButtons.style.display = 'none';
+    }
+  }
+
+  function toggleNestedBox(mainButton, nestedButton) {
+    var nestedBox = document.getElementById('nestedBox' + mainButton + '_' + nestedButton);
+
+    // Toggle the display property
+    if (nestedBox.style.display === 'none') {
+      nestedBox.style.display = 'block';
+    } else {
+      nestedBox.style.display = 'none';
+    }
+  }
+</script>
+
+</body>
+</html>
