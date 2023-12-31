@@ -1,0 +1,65 @@
+\title{Bayes' Theorem}
+\author{Rajesh Kumar}
+\date{}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Bayes' Theorem}
+  \begin{itemize}
+    \item Bayes' Theorem is a mathematical formula that describes the probability of an event based on prior knowledge of conditions that might be related to the event.
+    \item It is named after Thomas Bayes and is a fundamental concept in probability theory and statistics.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introduction}
+  \begin{itemize}
+    \item Bayes' Theorem provides a way to update probability estimates based on new evidence.
+    \item It is widely used in various fields, including medical diagnosis, information retrieval, and machine learning.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Where it is Used in Real Life}
+  \begin{itemize}
+    \item \textbf{Medical Diagnosis:} Assessing the probability of a disease given certain symptoms and test results.
+    \item \textbf{Email Filtering:} Determining the likelihood of an email being spam based on certain characteristics.
+    \item \textbf{Legal System:} Evaluating the probability of guilt or innocence based on evidence presented in a court case.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Bayes' Theorem Formula}
+  \begin{block}{Bayes' Theorem}
+    \[ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} \]
+  \end{block}
+  \begin{itemize}
+    \item \( P(A|B) \) is the probability of event \( A \) given that event \( B \) has occurred.
+    \item \( P(B|A) \) is the probability of event \( B \) given that event \( A \) has occurred.
+    \item \( P(A) \) and \( P(B) \) are the probabilities of events \( A \) and \( B \), respectively.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Worked Out Problems}
+  \textbf{Problem 1:} A medical test for a certain disease is 95\% accurate. If a person has the disease, the test will correctly identify it 95\% of the time. If a person does not have the disease, the test will incorrectly identify it 5\% of the time. If 2\% of the population has the disease, what is the probability that a person has the disease given that the test result is positive?
+
+  \textbf{Solution:}
+  \begin{enumerate}
+    \item \textbf{Given:} \( P(Disease) = 0.02 \), \( P(Positive|Disease) = 0.95 \), \( P(Positive|No Disease) = 0.05 \).
+    \item \textbf{Calculate:} \( P(Disease|Positive) = \frac{P(Positive|Disease) \cdot P(Disease)}{P(Positive|Disease) \cdot P(Disease) + P(Positive|No Disease) \cdot P(No Disease)} \).
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Reasoning for Bayes' Theorem Solution}
+  \begin{itemize}
+    \item Bayes' Theorem allows us to update our probability estimate based on new evidence.
+    \item For the given medical test problem, the probability of having the disease given a positive test result is calculated using Bayes' Theorem.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise for Students}
+  \begin{enumerate}
+    \item A factory produces two types of light bulbs: Brand A and Brand B. Brand A bulbs have a defect rate of 3\%, while Brand B bulbs have a defect rate of 5\%. If 80\% of the bulbs produced are Brand A, what is the probability that a randomly selected defective bulb is Brand A?
+    \item In a certain city, 2\% of the population has a rare medical condition. A diagnostic test for the condition has a false positive rate of 3\% and a false negative rate of 1\%. If a person tests positive for the condition, what is the probability that they actually have it?
+    \item Discuss a real-life scenario where understanding Bayes' Theorem is important.
+  \end{enumerate}
+\end{frame}
