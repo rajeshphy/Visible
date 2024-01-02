@@ -1,0 +1,48 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1094,         40]
+NotebookOptionsPosition[       722,         25]
+NotebookOutlinePosition[      1145,         42]
+CellTagsIndexPosition[      1102,         39]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Real Potential", "Item",
+ CellChangeTimes->{{3.9131641135090637`*^9, 
+  3.9131641197425327`*^9}},ExpressionUUID->"bff49085-4e2f-4d2b-8723-\
+4669a7ee9201"]
+},
+WindowSize->{926, 651},
+WindowMargins->{{21, Automatic}, {1, Automatic}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d87a8403-dc1f-46d5-b94a-9b1d4ccbbafd"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 160, 3, 49, "Item",ExpressionUUID->"bff49085-4e2f-4d2b-8723-4669a7ee9201"]
+}
+]
+*)
+
