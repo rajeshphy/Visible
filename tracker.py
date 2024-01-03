@@ -72,7 +72,6 @@ with open(output_file, "w") as f:
         dir_path = os.path.dirname(file_path)
         dir_segments.add(dir_path)
     current_dir = os.getcwd()
-    print("Current directory:", current_dir)
     
     # Sort dir_segments in alphabetical order
     dir_segments = sorted(dir_segments)
@@ -88,7 +87,7 @@ with open(output_file, "w") as f:
         for file_path in file_list:
             if os.path.dirname(file_path) == dir_segment:
                 file_name = os.path.basename(file_path)
-                f.write(f'<li><a href="{file_path}" style="background-color: #f9f9f9;">{file_name}</a></li>\n')  # Added contrast background color to href link
+                f.write(f'<li><a href="{dir_nam+"/"+file_name}" style="background-color: #f9f9f9;">{file_name}</a></li>\n')  # Added contrast background color to href link
         f.write("</ul>\n")
         f.write("</div>\n")  # Added box and shading
 
