@@ -17,10 +17,23 @@
                 });
             });
 
+//Slideshow
+var images = [];
+var imageElements = document.querySelectorAll("#slideshow IMG");
+for (var i = 1; i <= 3; i++) {
+    images.push("IMG/image" + i + ".jpg");
+}
+var currentIndex = 0;
+var slideshow = document.getElementById("slideshow");
 
+// Function to change the image source
 function changeImage() {
     slideshow.src = images[currentIndex];
-    currentIndex = (currentIndex + 1) % images.length;
+    currentIndex++;
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
 }
 
-setInterval(changeImage, 1500);
+// Call the changeImage function every 3 seconds
+setInterval(changeImage, 3000);
