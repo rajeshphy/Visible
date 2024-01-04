@@ -2,84 +2,7 @@
 <html>
 <head>
     <title>College Website</title>
-    <style>
-        /* CSS styles here */
-        body {
-            font-family: Times, serif;
-            font-size: 16pt;
-            background-color: #f2f2f2;
-            margin: 20px;
-        }
-        
-        h1 {
-            color: #333;
-            text-align: center;
-            margin-top: 50px;
-        }
-        
-        .container {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-            width: 100%;
-        }
-        
-        .button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            font-size: 18px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-        
-        .button:hover {
-            background-color: #0056b3;
-        }
-        
-        /* Mobile Styles */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 24px;
-                margin-top: 20px;
-            }
-            
-            .container {
-                flex-direction: column;
-                align-items: center;
-                margin-top: 20px;
-            }
-            
-            .button {
-                margin: 10px 0;
-            }
-        }
-        
-        /* Premium Styles */
-        .premium {
-            background-color: #ffcc00;
-            color: #333;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        
-        .premium:hover {
-            background-color: #e6b800;
-        }
-        
-        /* Adjusted Banner Height */
-        img {
-            display: block;
-            margin: 0 auto;
-            width: 100%;
-            max-height: 200px;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="web.css">
 </head>
 <body>
     <div class="box">
@@ -96,31 +19,8 @@
         <p id="content">
             <!-- Content from body.txt will be displayed here -->
         </p>
-        
-        <script>
-            // Read content from body.txt using JavaScript
-            // /Visible/Library/Coding/College_Website/
-            fetch('body.txt')
-                .then(response => response.text())
-                .then(content => {
-                    document.getElementById('content').innerHTML = content;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        </script>
-        
-        <script>
-            // JavaScript code here
-            const buttons = document.querySelectorAll('.button');
-            
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    alert('This is a premium feature. Please upgrade to access.');
-                });
-            });
-
-        </script>
-    </div>
+    </div>    
+    <script src="web.js"></script>
+    
 </body>
 </html>
