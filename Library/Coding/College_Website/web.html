@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Website</title>
+    <link rel="stylesheet" href="web.css">
+    <style>
+        /* CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>College Name</h1>
+        
+        <img src="banner.png" alt="College Banner">
+        
+        <div class="container">
+            <button class="button premium">About</button>
+            <button class="button premium">Directions</button>
+            <button class="button premium">Teachings</button>
+        </div>
+        
+        <p id="content">
+            <!-- Content from body.txt will be displayed here -->
+        </p>
+        
+        <script>
+            // Read content from body.txt using JavaScript
+            fetch('body.txt')
+                .then(response => response.text())
+                .then(content => {
+                    document.getElementById('content').innerHTML = content;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        </script>
+        
+        <script>
+            // JavaScript code here
+            const buttons = document.querySelectorAll('.button');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('This is a premium feature. Please upgrade to access.');
+                });
+            });
+
+        </script>
+    </div>
+</body>
+</html>
