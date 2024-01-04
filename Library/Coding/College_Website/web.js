@@ -16,3 +16,11 @@
                     alert('This is a premium feature. Please upgrade to access.');
                 });
             });
+
+
+function changeImage() {
+    slideshow.src = images[currentIndex];
+    currentIndex = (currentIndex + 1) % images.length;
+}
+
+setInterval(changeImage, 1500);
