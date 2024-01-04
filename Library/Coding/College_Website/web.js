@@ -23,6 +23,7 @@ var imageElements = document.querySelectorAll("#slideshow IMG");
 for (var i = 1; i <= 3; i++) {
     images.push("IMG/image" + i + ".jpg");
 }
+
 var currentIndex = 0;
 var slideshow = document.getElementById("slideshow");
 
@@ -36,4 +37,4 @@ function changeImage() {
 }
 
 // Call the changeImage function every 3 seconds
-setInterval(changeImage, 3000);
+setInterval(changeImage, 2000);
