@@ -2,8 +2,107 @@
 <html>
 <head>
     <title>College Website</title>
-    <link rel="stylesheet" type="text/css" href="web.css">
- 
+    <style>
+        body {
+            background-color: #f1f1f1;
+            font-family: Times, serif;
+            margin: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            width: 100%;
+        }
+        
+        .button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+                margin-top: 20px;
+            }
+            
+            .container {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+            }
+            
+            .button {
+                margin: 10px 0;
+            }
+        }
+        
+        /* Premium Styles */
+        .premium {
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .premium:hover {
+            background-color: #e6b800;
+        }
+        
+        /* Adjusted Banner Height */
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-height: 200px;
+        }
+
+        .box {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #slideshow {
+            width: 60%;
+            height: 40%;
+        }
+
+        /* Adjust text size with screen */
+        p {
+            font-size: 16pt;
+        }
+
+        /* Mobile text size */
+        @media (max-width: 600px) {
+            p {
+                font-size: 14pt;
+            }
+        }
+
+    </style>
 </head>
 <body>
     <div class="box">
@@ -28,7 +127,48 @@
 
     <footer style="text-align: center;">Design by <a href="https://rajeshphy.github.io">Rajesh Kumar</a></footer>
       
-    <script src="web.js"></script>
+    <script>
+         // Read content from body.txt using JavaScript
+         fetch('body.txt')
+                .then(response => response.text())
+                .then(content => {
+                    document.getElementById('content').innerHTML = content;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+                
+ // JavaScript code here
+            const buttons = document.querySelectorAll('.button');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('This is a premium feature. Please upgrade to access.');
+                });
+            });
+
+//Slideshow
+var images = [];
+var imageElements = document.querySelectorAll("#slideshow IMG");
+for (var i = 1; i <= 3; i++) {
+    images.push("IMG/image" + i + ".jpg");
+}
+
+var currentIndex = 0;
+var slideshow = document.getElementById("slideshow");
+
+// Function to change the image source
+function changeImage() {
+    slideshow.src = images[currentIndex];
+    currentIndex++;
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+}
+
+// Call the changeImage function every 3 seconds
+setInterval(changeImage, 2000);
+    </script>
 
 </body>
 </html>
