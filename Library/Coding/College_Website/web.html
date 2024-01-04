@@ -5,14 +5,16 @@
     <style>
         body {
             background-color: #f1f1f1;
-            font-family: Times, serif;
-            margin: 20px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         
         h1 {
             color: #333;
             text-align: center;
             margin-top: 50px;
+            font-size: 36px;
         }
         
         .container {
@@ -32,6 +34,7 @@
             border-radius: 5px;
             cursor: pointer;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
         }
         
         .button:hover {
@@ -63,6 +66,7 @@
             border: none;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
         }
         
         .premium:hover {
@@ -86,8 +90,9 @@
         }
 
         #slideshow {
-            width: 60%;
-            height: 40%;
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
         }
 
         /* Adjust text size with screen */
@@ -111,6 +116,8 @@
         </div>  
         <img id="banner" src="banner.png" alt="College Banner">
         <div class="container">
+            <button class="button premium">Home</button>
+            <button class="button premium">Principal Desk</button>
             <button class="button premium">About</button>
             <button class="button premium">Directions</button>
             <button class="button premium">Teachings</button>
