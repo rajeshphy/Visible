@@ -91,7 +91,7 @@
 
             /* Adjust banner height on mobile */
             #banner {
-                max-height: 120px;
+                max-height: 100px;
             }
         }
         
@@ -113,8 +113,8 @@
         img {
             display: block;
             margin: 0 auto;
-            width: 100%;
-            max-height: 200px;
+            width: 70%;
+            max-height: 300px;
         }
 
         .box {
@@ -126,7 +126,7 @@
         }
 
         #slideshow {
-            width: 100%;
+            width: 70%; /* Adjusted width same as banner */
             height: auto;
             margin-top: 20px;
         }
@@ -149,24 +149,24 @@
     <div class="box">
         <h1>College Name</h1>
         <div class="container">
+            <img id="banner" src="banner.png" alt="College Banner">
         </div>  
-        <img id="banner" src="banner.png" alt="College Banner">
+        
         <div class="container">
             <button class="button premium">Home</button>
             <button class="button premium">Principal Desk</button>
             <button class="button premium">About</button>
             <button class="button premium">Directions</button>
-            <button class="button premium">Teachings</button>
+            <button class="button premium">Teachings</button> 
         </div>
-
-        
+    <div class="container">
         <p id="content">
             <!-- Content from body.txt will be displayed here -->
         </p>
         
         <img id="slideshow" src="" alt="College Banner">
-
-    </div>  
+    </div>
+        
 
     <footer style="text-align: center;">Design by <a href="https://rajeshphy.github.io">Rajesh Kumar</a></footer>
       
