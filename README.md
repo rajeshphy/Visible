@@ -1,4 +1,8 @@
+## Shell Shortcuts
 
+Link to [Shell Shortcuts](terminal.md)
+## Convert format in pandoc
+pandoc -f latex -t markdown <file.tex> > <out.md>
 ## Pushing Changes from Desktop to Remote Repository
 
 Follow these steps to push changes from your local desktop environment to a remote repository on GitHub.
@@ -7,14 +11,14 @@ Follow these steps to push changes from your local desktop environment to a remo
 
 First, obtain the URL of the repository to which you want to push your changes. For example:
 ```bash
-https://github.com/rajeshphy/Visible.git
+https://github.com/rajeshphy/Private.git
 ```
 
 ### 2. Set Up Remote Origin
 
 Use the following command to set up the remote repository as the origin:
 ```bash
-git remote add origin https://github.com/rajeshphy/Visible.git
+git remote add origin https://github.com/rajeshphy/Private.git
 ```
 
 ### 3. Fetch and Rebase Changes
