@@ -1,0 +1,48 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amssymb, amsmath, graphicx, tabularx, booktabs, subfiles, amsthm,enumitem,xcolor,appendix}
+ 
+
+\newcommand{\ans}[1]{\textcolor{red}{#1}}
+
+\newcommand{\boxx}[1]{%
+    \begin{tcolorbox}[colback=gray!10, colframe=gray!50, title=Where it is getting wrong?]
+        #1
+    \end{tcolorbox}%
+}
+
+
+\title{}
+\author{}
+
+\begin{document}
+\maketitle
+%------------Body-Starts--------------------
+
+Definitions and ranges for the error function (\( \text{erf}(x) \)) and its complement (\( \text{erfc}(x) \)):
+
+1. {\bf Error Function (\( \text{erf}(x) \)):}
+   \[ \text{erf}(x) = \frac{2}{\sqrt{\pi}} \int_{0}^{x} e^{-t^2} dt \]
+   
+   {\it- Range:} The \(\text{erf}(x)\) function outputs values in the range \((-1, 1)\). As \(x\) approaches \(-\infty\), \(\text{erf}(x)\) approaches \(-1\), and as \(x\) approaches \(+\infty\), \(\text{erf}(x)\) approaches \(+1\).
+
+2. {\bf Complementary Error Function (\( \text{erfc}(x) \)):}
+   \[ \text{erfc}(x) = 1 - \text{erf}(x) \]
+
+   {\it- Range:} The \(\text{erfc}(x)\) function outputs values in the range \((0, 2)\). As \(x\) approaches \(-\infty\), \(\text{erfc}(x)\) approaches \(2\), and as \(x\) approaches \(+\infty\), \(\text{erfc}(x)\) approaches \(0\).
+
+These functions are widely used in probability and statistics, particularly in the context of normal distributions, to calculate probabilities associated with standard normal random variables. The range information is crucial for understanding the behavior of these functions as the input \(x\) varies.
+
+
+
+
+
+
+
+
+
+
+%------------Body-Ends--------------------
+%\bibliography{ref.bib}
+%\bibliographystyle{IEEEtran}
+\end{document}
