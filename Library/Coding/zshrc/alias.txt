@@ -1,0 +1,84 @@
+export EDITOR="code -w"
+export PATH=$PATH:/opt/homebrew/opt/djvulibre/bin
+export PATH=$PATH:/Users/rajeshkumar/Library/Python/3.11/bin:/usr/bin/python3
+export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+
+alias qu='/Users/rajeshkumar/XXX/SAVE/CODE/multi-browser.sh'
+alias qut='/Users/rajeshkumar/XXX/SAVE/CODE/physics-terms.sh'
+alias bkp='open /Users/rajeshkumar/XXX/SAVE/CODE/Physics-Stewart.pdf'
+alias bkl='open /Users/rajeshkumar/XXX/SAVE/CODE/LAlgebra-RonLarson.pdf'
+alias dct='open /Users/rajeshkumar/XXX/SAVE/CODE/Phy-Dictionary.pdf'
+alias o='open .'
+alias go='open /Users/rajeshkumar/XXX/GIT/trackerD.html'
+
+alias opd='open https://drive.google.com/drive/folders/1YUoZmdZ_JQn4966IVwzZRjjVS06i7VoL'
+
+alias jn='jupyter notebook'
+alias SYM='source /Users/rajeshkumar/XXX/GIT/Library/Coding/Symbolic-Calculation/SYM/bin/activate'
+alias da='deactivate'
+
+alias gadd='python3 tracker.py;cat fadd|xargs git add'
+alias gct='git commit -m'
+alias gsl='git stash list --date=local'
+alias gpush='git push -u origin main'
+alias viz='vi ~/.zshrc'
+alias src='source ~/.zshrc'
+alias gdiff='find . -type f -name "*.tex" -print0 | xargs -0 git diff --word-diff=color HEAD~1 HEAD | less -R'
+
+alias pl='mkdir -p gar;pdflatex -output-directory=gar'
+
+function cdd(){cd /Users/rajeshkumar/XXX/X}
+function cdg(){cd /Users/rajeshkumar/XXX/GIT}
+function cdgp(){cd /Users/rajeshkumar/XXX/GITP}
+
+function gdif() {
+    git diff --word-diff --color=always HEAD~"$2" HEAD "$1" | less -R
+}
+
+function dwnf() {
+    local link=$1
+    local start=$2
+    local end=$3
+    for ((i=start; i<=end; i++)); do
+        wget --no-check-certificate "$link$i.pdf"
+    done
+}
+
+function pdfline() {
+    local link=$1
+    local start=$2
+    local end=$3
+    local word=$4
+    for ((i=start; i<=end; i++)); do
+        pdftotext "$link$i.pdf" - | grep "^$word">>pdfline.txt
+    done
+}
+
+
+
+
+alias gv='git remote add origin https://github.com/rajeshphy/Visible.git'
+alias gp='git remote add origin https://github.com/rajeshphy/Private.git'
+
+function rpdf() {
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$1"_reduce.pdf "$1".pdf
+}
+
+function rimg() {
+    ffmpeg -i "$1"  -vf "scale=iw/2:-1" -q:v "$2"  r_"$1"
+}
+
+function lf(){cat /Users/rajeshkumar/XXX/Nts/lf.tex}
+function llf(){cat /Users/rajeshkumar/XXX/Nts/llf.tex}
+function nest(){cat /Users/rajeshkumar/XXX/Nts/nested-button.py}
+
+function vin(){open /Users/rajeshkumar/XXX/Nts/"$1".tex}
+function vip(){open /Users/rajeshkumar/XXX/Nts/gar/"$1".pdf}
+
+function sc(){open "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=$1"}
+
+function vipp(){pdflatex -output-directory=/Users/rajeshkumar/XXX/Nts/gar /Users/rajeshkumar/XXX/Nts/"$1".tex;open /Users/rajeshkumar/XXX/Nts/gar/"$1".pdf}
+ 
+function plo(){pdflatex -output-directory=gar "$1".tex;bibtex "gar/$1".aux;pdflatex -output-directory=gar "$1".tex;pdflatex -output-directory=gar "$1".tex;open "gar/$1".pdf}
+
+function op() {open "gar/$1".pdf} 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+         .date {
+            color: #008000; /* green */
+        }
+        .time {
+            color: #FFA500; /* orange */
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f3f3;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        details > summary {
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 80vw; /* 80% of the viewport width */
+            background-color: #110903; /* brown */
+            color: white;
+            border-radius: 15px;
+            border: 1px solid #5a2d0c; /* darker brown */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bold; /* make the text bold */
+            font-size: 1.2em; /* increase the size of the text */
+        }
+        details details > summary {
+            width: 64vw; /* 80% of the parent width */
+            
+        }
+        details details details > summary {
+            width: 51.2vw; /* 80% of the parent width */
+        }
+        details details details details > summary {
+            width: 41vw; /* 80% of the parent width */
+        }
+        details details details details details > summary {
+            width: 32vw; /* 80% of the parent width */
+        }
+        /* Continue as needed for deeper nesting */
+        details > ul {
+            margin: 0;
+            padding: 10px;
+            background-color: #ddd; /* light grey */
+            border-radius: 5px;
+        }
+        details details > ul {
+            background-color: #90ee90; /* light green */
+        }
+        details details details > ul {
+            background-color: #ffb6c1; /* light pink */
+        }
+        details details details details > ul {
+            background-color: #ffffe0; /* light yellow */
+        }
+        details details details details details > ul {
+            background-color: #ddd; /* light grey */
+        }
+        a {
+            color: #01060c;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            details > summary {
+                width: 90vw; /* 100% of the viewport width */
+            }
+            details details > summary {
+                width: 80vw; /* 80% of the parent width */
+            }
+            details details details > summary {
+                width: 70vw; /* 80% of the parent width */
+            }
+            details details details details> summary {
+                width: 60vw; /* 80% of the parent width */
+            }
+            details details details details > summary {
+            width: 50vw; /* 80% of the parent width */
+            }
+            details details details details details > summary {
+                width: 40vw; /* 80% of the parent width */
+            }
+            /* Continue as needed for deeper nesting */
+            details > ul {
+                padding: 0 0 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>File List</h1>
+    {% for child in directory_structure.children recursive %}
+        {% if child.type == 'file' %}
+            <p><a href="{{ child.path }}" target="_blank">{{ child.name }}</a>  | <span class="date"> {{ child.mtime.split(' ')[0] }}</span> <span class="time">{{ child.mtime.split(' ')[1] }}</span></p>
+        {% else %}
+            <details>
+                <summary>{{ child.name }}  | <span class="date">{{ child.mtime.split(' ')[0] }}</span> <span class="time">{{ child.mtime.split(' ')[1] }}</span></summary>
+                <ul>
+                    {{ loop(child.children) }}
+                </ul>
+            </details>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>

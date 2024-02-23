@@ -1,0 +1,148 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amssymb, amsmath, graphicx, tabularx, booktabs, subfiles, amsthm,enumitem,xcolor,appendix}
+
+\usepackage{tcolorbox}
+
+\newcommand{\ans}[1]{\textcolor{red}{#1}}
+\newcommand{\anss}[1]{\textcolor{blue}{#1}}
+
+
+\newcommand{\boxx}[1]{%
+    \begin{tcolorbox}[colback=gray!10, colframe=gray!50, title=Where it is getting wrong?]
+        #1
+    \end{tcolorbox}%
+}
+
+\newcommand{\boxxx}[1]{%
+    \begin{tcolorbox}[colback=orange!10, colframe=gray!50, title=Fixing the error]
+        #1
+    \end{tcolorbox}%
+}
+
+
+
+\title{Response to Feedback on PT Paper\\\small{(Email Listing order: latest $\rightarrow$ oldest)}}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+%------------Body-Starts--------------------
+
+\section*{Monday, December 25, 2023 at 9:34 PM}
+
+Dear Rajesh,\\
+\indent May be I should amplify. One can actually make any coordinate transformation in QM but one has to calculate the Laplacian in the new coordinates and use it to solve the Schrödinger equation in new coordinates.\\
+
+My hunch is that what Rajesh is using is relevant in classical but not QM. It is not clear from his steps that his approach uses the correct Laplacian in new coordinates.\\
+
+I hope I am wrong; otherwise, one has to recheck all the calculations of Rajesh (in case he has not ensured the correct Laplacian in new coordinates).\\
+
+Best wishes,\\
+Avinash
+
+
+
+
+\section*{Monday, December 25, 2023 at 3:17 PM}
+
+Dear Rajesh,\\
+\indent I wonder if the difference in approaches of Rajesh and myself is because Rajesh is relying on principal axis transformation. While as far as I know, one can always go from one coordinate system to another in QM so long as one can ensure that if we are going from\\
+\[
+(x, y) \to (u, v)
+\]
+we must make sure that
+\[
+\frac{d^2}{dx^2} + \frac{d^2}{dy^2} = \frac{d^2}{du^2} + \frac{d^2}{dv^2}
+\]
+Any transformation that respects that is perfectly acceptable.\\
+
+May be you too think about it.\\
+
+Best wishes,\\
+Avinash
+%add underline
+\section*{Reply}
+
+%Reply outline in 3 bullets
+\begin{itemize}
+    \item Have shown what is wrong with Principal Axis Transformation and possible fix. The correct transformation that works for both real and complex potentials.
+    \item Why dilemma in calling it principal axis transformation or similarity transformation?
+\end{itemize}
+
+
+
+\anss{Is the following transformation \(P^{-1}.V.P\), for diagonalizing a matrix  $V$ works? \\ We will consider one real and one imaginary example, where it will be shown that it doesn't work for imaginary potential.}
+\begin{enumerate}
+\item \boxx{
+    \begin{enumerate}
+    \item {\bf For Real Potentials}
+    Given a potential of the form \(V= \begin{bmatrix} 4 & 1 \\ 1 & 8 \end{bmatrix}\), it has the following eigenvalues and eigenvectors:
+
+    Eigenvalues: \(6 + \sqrt{5}\), \(6 - \sqrt{5}\)
+
+    Eigenvectors: \(\begin{bmatrix} \sqrt{5}-2 \\ 1 \end{bmatrix}\), \(\begin{bmatrix} -\sqrt{5}-2\\ 1 \end{bmatrix}\)
+
+    To diagonalize \(V\), we use the following transformation \(P^{-1}.V.P\). To obtain \(P\), we orthogonalize the eigenvectors. Finally, taking the inverse of \(P\) gives \(P^{-1}\):
+
+    \[P = \begin{bmatrix} \frac{\sqrt{5}-2}{\sqrt{\left(\sqrt{5}-2\right)^2+1}} & \frac{-\sqrt{5}-2}{\sqrt{\left(\sqrt{5}+2\right)^2+1}} \\ \frac{1}{\sqrt{\left(\sqrt{5}-2\right)^2+1}} & \frac{1}{\sqrt{\left(\sqrt{5}+2\right)^2+1}} \end{bmatrix};\; P^{-1} = \begin{bmatrix} \frac{1}{\sqrt{\left(\sqrt{5}+2\right)^2+1}} & \frac{\sqrt{5}+2}{\sqrt{\left(\sqrt{5}+2\right)^2+1}} \\ -\frac{1}{\sqrt{\left(\sqrt{5}-2\right)^2+1}} & \frac{\sqrt{5}-2}{\sqrt{\left(\sqrt{5}-2\right)^2+1}}\end{bmatrix}\]
+
+    Applying the formula \(P^{-1}.V.P\), we get:
+
+    \[\begin{bmatrix} \sqrt{5}+6 & 0 \\ 0 & 6-\sqrt{5} \end{bmatrix}\]
+
+    Therefore, the matrix is diagonalized.
+
+    \item {\bf For Complex Potentials}
+    Given a potential of the form $V = \begin{pmatrix} 4 & i \\ i & 8 \end{pmatrix}$, it has the following eigenvalues and eigenvectors:
+
+    \textbf{Eigenvalues:} $6 + \sqrt{3}, \, 6 - \sqrt{3}$
+
+    \textbf{Eigenvectors:} $\begin{pmatrix} -i \left(\sqrt{3}-2\right) \\ 1 \end{pmatrix}, \, \begin{pmatrix} i \left(\sqrt{3}+2\right) \\ 1 \end{pmatrix}$
+
+    To diagonalize $V$, we use the transformation $P^{-1}VP$, where $P$ is obtained by orthogonalizing the eigenvectors. The inverse of $P$ gives $P^{-1}$:
+
+    \[ P = \begin{pmatrix} -\frac{i \left(\sqrt{3}-2\right)}{\sqrt{1+\left(\sqrt{3}-2\right)^2}} & \frac{i \left(\sqrt{3}+2\right)}{\sqrt{1+\left(\sqrt{3}+2\right)^2}} \\ \frac{1}{\sqrt{1+\left(\sqrt{3}-2\right)^2}} & \frac{1}{\sqrt{1+\left(\sqrt{3}+2\right)^2}}\end{pmatrix} ;\; P^{-1} = \begin{pmatrix} \frac{1}{\sqrt{1+\left(\sqrt{3}+2\right)^2}} & -\frac{i \left(\sqrt{3}+2\right)}{\sqrt{1+\left(\sqrt{3}+2\right)^2}} \\ -\frac{1}{\sqrt{1+\left(\sqrt{3}-2\right)^2}} & -\frac{i \left(\sqrt{3}-2\right)}{\sqrt{1+\left(\sqrt{3}-2\right)^2}} \end{pmatrix} \]
+
+    Applying the formula $P^{-1}VP$, we get the matrix:
+
+    \[ \left(
+        \begin{array}{cc}
+         \frac{1}{2} (-3) i \left(2 \sqrt{3}+1\right) & 0 \\
+         0 & \frac{3 i}{2}-3 i \sqrt{3} \\
+        \end{array}
+        \right) \]
+
+    The diagonalized matrix has different eigenvalues and result does not produce eigenvalues as seen in above real potential.
+
+    \end{enumerate}
+    }
+
+
+    \boxxx{Instead of treating $\sqrt{a^2+b^2}$ as the length of a complex number $C=a+i b$, we have to treat $\sqrt{a^2-b^2}$ as the length while orthogonalizing the eigenvectors. doing so gives $P$ and $P^{-1}$ as \[ P = \begin{pmatrix} -\frac{i \left(\sqrt{3}-2\right)}{\sqrt{1-\left(\sqrt{3}-2\right)^2}} & \frac{i \left(\sqrt{3}+2\right)}{\sqrt{1-\left(\sqrt{3}+2\right)^2}} \\ \frac{1}{\sqrt{1-\left(\sqrt{3}-2\right)^2}} & \frac{1}{\sqrt{1-\left(\sqrt{3}+2\right)^2}}\end{pmatrix} ;\; P^{-1} = \begin{pmatrix} \frac{1}{\sqrt{1-\left(\sqrt{3}+2\right)^2}} & -\frac{i \left(\sqrt{3}+2\right)}{\sqrt{1-\left(\sqrt{3}+2\right)^2}} \\ -\frac{1}{\sqrt{1-\left(\sqrt{3}-2\right)^2}} & -\frac{i \left(\sqrt{3}-2\right)}{\sqrt{1-\left(\sqrt{3}-2\right)^2}} \end{pmatrix} \]
+
+    and this results in following results
+    \[P^{-1}.V.P=-\left(
+    \begin{array}{cc}
+    \sqrt{3}+6 & 0 \\
+    0 & 6-\sqrt{3} \\
+    \end{array}
+    \right)\]
+
+    which correctly diagonalizes the matrix and gives eigenvalues with a factor of -1.
+    }
+    \item \ans{Reply: 2D Transformation as given in figure-\ref{fig-2d-L} Preserves the form of Laplacian while moving from $x-y\rightarrow u-v$.}
+    
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1\linewidth]{LP2D.png}
+        \caption{Proof of form invariance in Laplacian. Here $k=\frac{\omega _x^2-\omega _y^2}{\sqrt{4 \lambda ^2+\left(\omega _x^2-\omega _y^2\right){}^2}}$ in the potential of the form $V=\omega_x^2x^2+\omega_y^2y^2+2\lambda xy$}
+        \label{fig-2d-L}
+    \end{figure}    
+    Therefore the transformation given in figure-1 applies for both real and complex potentials as we are treating everything like real and whenever one of two components becomes imaginary it will result in negative sign so as to give $\sqrt{a^2-b^2}$.
+
+
+    \item 
+\end{enumerate}
+\end{document}

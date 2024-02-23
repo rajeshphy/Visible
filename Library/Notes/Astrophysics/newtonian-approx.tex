@@ -1,0 +1,80 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amssymb, amsmath, graphicx, tabularx, booktabs, subfiles, amsthm,enumitem,xcolor,appendix}
+\usepackage{fancyhdr}
+
+\fancyfoot[C]{\copyright\ Rajesh Kumar}
+\pagestyle{fancy}
+
+
+
+\title{Newtonian Limit of the Geodesic Equations}
+\author{Rajesh Kumar\\kr.rajesh.phy@gmail.com}
+\date{}
+\begin{document}
+\maketitle
+%------------Body-Starts--------------------
+
+
+In the previous lecture, we have seen the geodesic equation, which reads:
+
+\begin{equation}
+    \frac{d^2x^\nu}{ds^2}=-\Gamma^\nu_{\alpha\beta}\frac{dx^\alpha}{ds}\frac{dx^\beta}{ds}
+\end{equation}
+
+Here, $s$ represents proper time, the parameter of motion. The right-hand side (RHS) of the geodesic equation follows the Einstein summation convention and is a function of the metric tensor and its derivatives. The left-hand side (LHS) represents the acceleration of a particle in curved spacetime.
+
+In the Newtonian limit, the particle under consideration moves with a velocity much less than the speed of light. In this limit, the metric tensor is nearly flat, and the connection coefficients are small. The geodesic equation can be approximated to the Newtonian form as:
+
+\begin{equation}
+    \frac{d^2x^\nu}{dt^2}=-\Gamma^\nu_{00}\left(\frac{dx^0}{dt}\right)^2
+\end{equation}
+
+The connection coefficients are given by:
+
+\begin{equation}
+    \Gamma^\nu_{00}=\frac{1}{2}\eta^{\nu\alpha}\left(\frac{\partial g_{\alpha 0}}{\partial x^0}+\frac{\partial g_{0\alpha }}{\partial x^0}-\frac{\partial g_{00}}{\partial x^\alpha}\right)
+\end{equation}
+
+In the static field, the time derivatives $\frac{\partial g_{\alpha 0}}{\partial x^0}$ and $\frac{\partial g_{0\alpha}}{\partial x^0}$ are zero. The metric tensor $g_{00}$ is given by:
+
+\begin{equation}
+    g_{00}=\eta_{00}+h_{00}
+\end{equation}
+
+Thus, the connection coefficients reduce to:
+
+\begin{equation}
+    \Gamma^\nu_{00}=-\frac{1}{2}\eta^{\nu\alpha}\frac{\partial h_{0 0}}{\partial x^\alpha}
+\end{equation}
+
+It should be noted that $\frac{\partial h_{0 0}}{\partial x^\alpha}\neq0$ only when $\alpha\neq0$ and zero otherwise. Also, $\eta_{\nu\alpha}$ is an identity for $\alpha\neq0$ (let's denote it as $\alpha'$). Therefore, the geodesic equation in the Newtonian limit becomes:
+
+\begin{equation}
+    \frac{d^2x^\nu}{d\tau^2}=\frac{1}{2}\frac{\partial h_{0 0}}{\partial x^{\alpha'}}\left(\frac{dx^0}{d\tau}\right)^2
+\end{equation}
+
+Multiplying both sides by $\left(\frac{d\tau}{dx^0}\right)^2$ to express the acceleration in terms of time as $t=x^0$, where $c=1$, we get:
+
+\begin{equation}
+    \frac{d^2x^{\alpha'}}{dt^2}=\frac{1}{2}\frac{\partial h_{0 0}}{\partial x^{\alpha'}}
+\end{equation}
+
+Here, $x^{\alpha'}$ represents the spatial coordinates, and therefore, the RHS can be written as the gradient of a scalar potential $\Phi$:
+
+\begin{equation}
+    \frac{d^2x^{\alpha'}}{dt^2}=-\nabla\Phi
+\end{equation}
+
+This is the Newtonian equation of motion for a particle in a gravitational field.
+
+\section*{ Supplementary Material}
+We define the flat space time metric tensor $\eta_{\alpha\beta}$ as
+\[\eta ={\begin{pmatrix}-c^{2}&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix}}\]
+where $c$ is the speed of light. The perturbed metric tensor is given by $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}$, where $h_{\mu\nu}$ is the perturbation. The connection coefficients are given by:
+\[\Gamma^\mu_{\alpha\beta}=\frac{1}{2}g^{\mu\lambda}\left(\frac{\partial g_{\lambda\alpha}}{\partial x^\beta}+\frac{\partial g_{\lambda\beta}}{\partial x^\alpha}-\frac{\partial g_{\alpha\beta}}{\partial x^\lambda}\right)\]
+The Christoffel symbols are symmetric in the lower indices, i.e., $\Gamma^\mu_{\alpha\beta}=\Gamma^\mu_{\beta\alpha}$. The geodesic equation written in terms of proper time as:
+\[\frac{d^2x^\mu}{ds^2}=-\Gamma^\mu_{\alpha\beta}\frac{dx^\alpha}{ds}\frac{dx^\beta}{ds}\]
+with the proper time $s$ defined as $s^2=g_{\nu\mu}x^\nu x^\mu$. In the Newtonian limit, the metric tensor is nearly flat, and the connection coefficients are small.
+
+\end{document}

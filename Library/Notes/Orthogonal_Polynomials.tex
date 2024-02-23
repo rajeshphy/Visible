@@ -1,0 +1,60 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amssymb, amsmath, graphicx, tabularx, booktabs, subfiles, amsthm,enumitem,xcolor,appendix}
+ 
+
+\newcommand{\ans}[1]{\textcolor{red}{#1}}
+
+\newcommand{\boxx}[1]{%
+    \begin{tcolorbox}[colback=gray!10, colframe=gray!50, title=Where it is getting wrong?]
+        #1
+    \end{tcolorbox}%
+}
+
+
+\title{Orthogonal Polynomials}
+\author{Rajesh Kumar\\kr.rajesh.phy@gmail.com}
+
+\begin{document}
+\maketitle
+%------------Body-Starts--------------------
+
+\begin{abstract}
+    We will brief the three classical orthogonal polynomials and their properties. The three classical orthogonal polynomials are Hermite, Laguerre, and Jacobi polynomials. We will also discuss the Rodrigues formula, generating function, and the recurrence relation for these polynomials.
+\end{abstract}
+
+Strum-Liouville theory, used in orthogonal polynomial studies, involves a Liouville-type second order differential equation with coefficients $p(x)$, $q(x)$, $r(x)$, and eigenvalue $\lambda_i$ for polynomial $y_i$. The differential equation is given by
+\begin{equation}
+    p(x)\frac{d^2}{dx^2}y_i(x) + q(x)\frac{d}{dx}y_i(x) + r(x)y_i(x) = \lambda_i y_i(x).
+\end{equation}
+The degree of the coefficients are $p(x)\le2$, $q(x)\le1$, and $r(x)=0$. The weight function $w(x)$ is defined as $w(x) = r(x)e^{Q(x)}$, where $Q(x) = \int \frac{q(x)}{p(x)}dx$. The weight function is used to define the inner product of two functions $f(x)$ and $g(x)$ as
+
+
+The three classical classical polynomials satisfying the above differential equation are Hermite, Laguerre, and Jacobi polynomials. The orthogonality conditions for these polynomials are given in tabular form below:
+%make table
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Polynomial} & \textbf{Interval} & \textbf{Weight Function} & \textbf{Orthogonality} \\
+        \hline
+        Hermite & $(-\infty, \infty)$ & $e^{-x^2}$ & $\int_{-\infty}^{\infty} H_n(x)H_m(x)e^{-x^2}dx = 2^n n! \sqrt{\pi}\delta_{nm}$ \\
+        & & & \\
+        Laguerre & $[0, \infty)$ & $x^{\alpha}e^{-x}$ & $\int_{0}^{\infty} L_n(x)L_m(x)x^{\alpha}e^{-x}dx = \delta_{nm}$ \\
+        & & & \\
+        Jacobi & $[-1, 1]$ & $(1-x)^\alpha(1+x)^\beta$ & $\int_{-1}^{1} P_n^{(\alpha, \beta)}(x)P_m^{(\alpha, \beta)}(x)(1-x)^\alpha(1+x)^\beta dx =$\\& & & $\frac{2^{(\alpha+\beta+1)}}{2n+\alpha+\beta+1}\frac{\Gamma(n+\alpha+1)\Gamma(n+\beta+1)}{n!\Gamma(n+\alpha+\beta+1)}\delta_{nm}$ \\
+        \hline
+    \end{tabular}
+    \caption{Orthogonality conditions for Hermite, Laguerre, and Jacobi polynomials}
+    \label{tab:my_label}
+\end{table}
+
+
+
+
+
+
+%------------Body-Ends--------------------
+%\bibliography{ref.bib}
+%\bibliographystyle{IEEEtran}
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{datetime}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{pdflscape}
+\usepackage{longtable}
+
+\geometry{margin=1in}
+
+\title{}
+\date{}
+
+% Increase the height of each cell
+\renewcommand{\arraystretch}{3}
+
+\begin{document}
+
+\begin{landscape}
+\begin{longtable}{|p{3cm}|p{4cm}|p{1.5cm}|p{5cm}|p{3cm}|p{4cm}|p{3cm}|p{5cm}|}
+    \caption{Receiving Register} \\
+    \hline
+    \textbf{Date} & \textbf{Item Description} & \textbf{Quantity} & \textbf{Received By} & \textbf{Receiver Sign} & \textbf{Authorized Personnel Signature} & \textbf{Remarks} \\
+    \hline
+    \endfirsthead
+
+    \multicolumn{7}{c}%
+    {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+    \hline
+    \textbf{Date} & \textbf{Item Description} & \textbf{Quantity} & \textbf{Received By} & \textbf{Receiver Sign} & \textbf{Authorized Personnel Signature} & \textbf{Remarks} \\
+    \hline
+    \endhead
+
+    \hline \multicolumn{7}{|r|}{{Continued on next page}} \\ \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    &&&&&& \\
+    \hline
+    
+    
+\end{longtable}
+\end{landscape}
+
+\end{document}

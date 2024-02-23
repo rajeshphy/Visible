@@ -1,0 +1,171 @@
+\documentclass{book}
+
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\geometry{a4paper, margin=1in}
+
+\title{Building Websites with Jekyll}
+\author{Rajesh Kumar\\kr.rajesh.phy@gmail.com}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+Jekyll is a powerful static site generator that simplifies the process of building and maintaining websites. It's a popular choice for developers who want a fast and efficient way to create static websites or blogs without the complexity of a traditional content management system.
+
+In this article, we'll explore the basics of Jekyll and how you can use it to develop your website.
+
+\section*{Getting Started with Jekyll}
+
+\subsection*{Installation}
+
+Before you start using Jekyll, you need to have Ruby installed on your system. Once Ruby is installed, you can install Jekyll using the following command:
+
+\begin{lstlisting}[language=bash]
+gem install jekyll
+\end{lstlisting}
+
+\subsection*{Creating a New Jekyll Site}
+
+To create a new Jekyll site, navigate to the desired directory and run the following command:
+
+\begin{lstlisting}[language=bash]
+jekyll new mywebsite
+\end{lstlisting}
+
+This will generate a new Jekyll site in the "mywebsite" directory.
+
+\section*{Understanding the Jekyll Directory Structure}
+
+Jekyll follows a specific directory structure. Here are some key directories and files:
+
+\begin{itemize}
+    \item \textbf{\_layouts}: Contains templates for different pages.
+    \item \textbf{\_posts}: Stores your blog posts in Markdown format.
+    \item \textbf{\_config.yml}: Configuration file for your Jekyll site.
+    \item \textbf{index.html}: The main page of your site.
+\end{itemize}
+
+\section*{Creating Content}
+
+To add a new blog post, create a new Markdown file in the \_posts directory. Jekyll will automatically convert these files into HTML.
+
+\section*{Customizing Your Site}
+
+Jekyll allows you to customize your site's appearance and functionality easily. You can modify the \_config.yml file to change settings such as the site title, description, and more.
+
+\section*{Building and Previewing Your Site}
+
+To build and preview your site locally, run the following commands:
+
+\begin{lstlisting}[language=bash]
+cd mywebsite
+jekyll serve
+\end{lstlisting}
+
+This will start a local server, and you can view your site by navigating to \url{http://localhost:4000} in your web browser.
+
+\section*{Conclusion}
+
+Jekyll is a fantastic tool for website development, offering simplicity and flexibility. Whether you're creating a personal blog or a portfolio site, Jekyll can streamline the process and help you focus on creating great content.
+
+In future posts, we'll explore advanced features of Jekyll and how to enhance your site further.
+
+Happy coding!
+
+\chapter*{Practical Session}
+
+
+% How to install Jekyll
+\section*{How to install Jekyll in Linux}
+% Mention the steps to install Jekyll in terminal in Ubuntu
+\begin{enumerate}
+\item \begin{verbatim}
+sudo apt-get update
+\end{verbatim}
+\item \begin{verbatim}
+sudo apt-get install ruby-full build-essential zlib1g-dev
+\end{verbatim}
+\item \begin{verbatim}
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+\end{verbatim}
+\item \begin{verbatim}
+echo 'export GEM_HOME="~/gems"' >> ~/.bashrc
+\end{verbatim}
+\item \begin{verbatim}
+echo 'export PATH="~/gems/bin:$PATH"' >> ~/.bashrc
+\end{verbatim}
+\item \begin{verbatim}
+source ~/.bashrc
+\end{verbatim}
+\item \begin{verbatim}
+gem install jekyll bundler
+\end{verbatim}
+\item \begin{verbatim}
+jekyll new my-awesome-site
+\end{verbatim}
+\end{enumerate}
+
+%For Mac OS
+\section*{How to install Jekyll on macOS}
+\begin{enumerate}
+\item First, check if gem is installed or not. Type the following command to check if gem is installed or not:
+ \begin{verbatim} 
+sudo gem install jekyll 
+\end{verbatim}
+\item If gem is not installed, then install it using this command:
+ \begin{verbatim} 
+sudo gem install jekyll 
+\end{verbatim}
+
+\item Ensure the gem directory is in the path. Add the following line to your shell profile file (e.g., ~/.bashrc or ~/.zshrc):
+ \begin{verbatim} 
+export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+\end{verbatim}
+
+\item Install Jekyll and Bundler using the following command:
+ \begin{verbatim}gem install bundler
+\end{verbatim}
+\item Install Jekyll Dependences using the following command:
+ \begin{verbatim}bundle install
+\end{verbatim}
+\item Create a new Jekyll site at ./myblog:
+ \begin{verbatim}jekyll new myblog
+\end{verbatim}
+
+\end{enumerate}
+
+%For Windows
+\section*{How to install Jekyll on Windows}
+\begin{enumerate}
+\item Install Ruby+Devkit 2.6.X (x64) from RubyInstaller Downloads. Choose the default options for installation.
+\item Run the ridk install step from the last stage of the RubyInstaller installation. This is needed for installing gems with native extensions. From the command prompt:
+ \begin{verbatim}ridk install
+\end{verbatim}  
+\item Install Jekyll and Bundler using the following command:
+ \begin{verbatim}gem install jekyll bundler
+\end{verbatim}
+\item Create a new Jekyll site at ./myblog:
+ \begin{verbatim}jekyll new myblog
+\end{verbatim}
+\item Change into your new directory:
+ \begin{verbatim}cd myblog
+\end{verbatim}
+\item Build the site and make it available on a local server:
+ \begin{verbatim}bundle exec jekyll serve
+\end{verbatim}
+\item Browse to \url{http://localhost:4000}
+\item Add the following line to your shell profile file (e.g., ~/.bashrc or ~/.zshrc):
+ \begin{verbatim}export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+\end{verbatim}
+\end{enumerate}
+
+\end{document}

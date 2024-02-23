@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Website</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 36px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        .button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+                margin-top: 20px;
+            }
+            
+            .container {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+            
+            .button {
+                margin: 10px 0;
+            }
+
+            /* Increase text size on mobile */
+            p {
+                font-size: 18pt;
+            }
+
+            /* Adjust banner height on mobile */
+            #banner {
+                max-height: 150px;
+            }
+        }
+
+        /* Mobile Styles for screens between 481px and 640px */
+        @media (min-width: 481px) and (max-width: 640px) {
+            h1 {
+                font-size: 28px;
+                margin-top: 20px;
+            }
+            
+            .container {
+                margin-top: 30px;
+            }
+            
+            .button {
+                font-size: 16px;
+            }
+
+            /* Increase text size on mobile */
+            p {
+                font-size: 16pt;
+            }
+
+            /* Adjust banner height on mobile */
+            #banner {
+                max-height: 100px;
+            }
+        }
+        
+        /* Premium Styles */
+        .premium {
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+        
+        .premium:hover {
+            background-color: #e6b800;
+        }
+        
+        /* Adjusted Banner Height */
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 95%; /* Adjusted image width to 70% */
+            max-height: 210px; /* Adjusted banner height to 70% */
+        }
+
+        .box {
+            background-color: #ffffff;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #slideshow {
+            width: 95%; /* Adjusted width same as banner */
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Adjust text size with screen */
+        p {
+            font-size: 16pt;
+        }
+
+        /* Mobile text size */
+        @media (max-width: 600px) {
+            p {
+                font-size: 18pt;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <h1>College Name</h1>
+        <div class="container">
+            <img id="banner" src="banner.png" alt="College Banner">
+        </div>  
+        
+        <div class="container">
+            <button class="button premium">Home</button>
+            <button class="button premium">Principal Desk</button>
+            <button class="button premium">About</button>
+            <button class="button premium">Directions</button>
+            <button class="button premium">Teachings</button> 
+        </div>
+        <div class="container">
+            <p id="content">
+                <!-- Content from body.txt will be displayed here -->
+            </p>
+        </div>  
+        <div class="container">
+            <img id="slideshow" src="" alt="College Banner">
+        </div>
+    </div>
+        
+
+    <footer style="text-align: center;">Design by <a href="https://rajeshphy.github.io">Rajesh Kumar</a></footer>
+      
+    <script>
+         // Read content from body.txt using JavaScript
+         fetch('body.txt')
+                .then(response => response.text())
+                .then(content => {
+                    document.getElementById('content').innerHTML = content;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+                
+ // JavaScript code here
+            const buttons = document.querySelectorAll('.button');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('This is a premium feature. Please upgrade to access.');
+                });
+            });
+
+//Slideshow
+var images = [];
+var imageElements = document.querySelectorAll("#slideshow IMG");
+for (var i = 1; i <= 3; i++) {
+    images.push("IMG/image" + i + ".jpg");
+}
+
+var currentIndex = 0;
+var slideshow = document.getElementById("slideshow");
+
+// Function to change the image source
+function changeImage() {
+    slideshow.src = images[currentIndex];
+    currentIndex++;
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+}
+
+// Call the changeImage function every 3 seconds
+setInterval(changeImage, 2000);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+\title{Correlation and Regression Analysis}
+\author{Rajesh Kumar}
+\date{}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Correlation and Regression Analysis}
+  \begin{itemize}
+    \item Correlation and Regression Analysis are statistical techniques used to examine relationships between variables.
+    \item They help understand the strength and direction of associations between two or more variables.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Correlation Analysis}
+  \begin{itemize}
+    \item Correlation measures the strength and direction of a linear relationship between two variables.
+    \item It is represented by the correlation coefficient (\(r\)), ranging from -1 to 1.
+    \item Positive values indicate a positive correlation, negative values indicate a negative correlation, and 0 indicates no correlation.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introduction to Correlation Analysis}
+  \begin{itemize}
+    \item Correlation does not imply causation; it only shows the degree of association.
+    \item Scatter plots are often used to visualize the relationship between variables.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Where it is Used in Real Life}
+  \begin{itemize}
+    \item \textbf{Finance:} Examining the correlation between stock prices.
+    \item \textbf{Healthcare:} Analyzing the correlation between exercise and heart health.
+    \item \textbf{Education:} Investigating the correlation between study hours and exam scores.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Calculation of Correlation Coefficient}
+  \begin{itemize}
+    \item The correlation coefficient (\(r\)) is calculated using the formula:
+    \[ r = \frac{\sum{(x_i - \bar{x})(y_i - \bar{y})}}{\sqrt{\sum{(x_i - \bar{x})^2} \cdot \sum{(y_i - \bar{y})^2}}} \]
+    \item Where \(x_i\) and \(y_i\) are individual data points, \(\bar{x}\) and \(\bar{y}\) are means, and \(\sum\) denotes the sum.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Worked Out Example - Correlation}
+  \textbf{Example:} Calculate the correlation coefficient (\(r\)) for two variables: \(X = [10, 15, 20, 25, 30]\) and \(Y = [25, 20, 15, 10, 5]\).
+
+  \textbf{Solution:}
+  \begin{itemize}
+    \item \textbf{Correlation Coefficient:} \[ r = \frac{(10-20)(25-15) + (15-20)(20-15) + \ldots + (30-20)(5-15)}{\sqrt{(10-20)^2 + (15-20)^2 + \ldots + (30-20)^2} \cdot \sqrt{(25-15)^2 + (20-15)^2 + \ldots + (5-15)^2}} \]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Reasoning for Correlation Analysis}
+  \begin{itemize}
+    \item Correlation analysis helps us understand the strength and direction of the linear relationship between variables.
+    \item For the given example, we calculated the correlation coefficient (\(r\)) to quantify the association between two variables.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Regression Analysis}
+  \begin{itemize}
+    \item Regression analysis explores the relationship between a dependent variable (\(Y\)) and one or more independent variables (\(X\)).
+    \item It aims to model the nature of the relationship and make predictions.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introduction to Regression Analysis}
+  \begin{itemize}
+    \item The simplest form is simple linear regression, which involves one independent variable.
+    \item The regression equation is represented as \(Y = \beta_0 + \beta_1X + \varepsilon\), where \(\beta_0\) and \(\beta_1\) are coefficients, and \(\varepsilon\) is the error term.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Where it is Used in Real Life}
+  \begin{itemize}
+    \item \textbf{Economics:} Modeling the relationship between income and spending.
+    \item \textbf{Marketing:} Predicting sales based on advertising spending.
+    \item \textbf{Healthcare:} Estimating the impact of a variable on patient outcomes.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Calculation of Regression Coefficients}
+  \begin{itemize}
+    \item The regression coefficients (\(\beta_0\) and \(\beta_1\)) are calculated using the formulas:
+    \[ \beta_1 = \frac{\sum{(x_i - \bar{x})(y_i - \bar{y})}}{\sum{(x_i - \bar{x})^2}} \]
+    \[ \beta_0 = \bar{y} - \beta_1\bar{x} \]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Worked Out Example - Regression}
+  \textbf{Example:} Perform simple linear regression for the variables \(X = [10, 15, 20, 25, 30]\) and \(Y = [25, 20, 15, 10, 5]\).
+
+  \textbf{Solution:}
+  \begin{itemize}
+    \item \textbf{Regression Coefficients:} \[ \beta_1 = \frac{(10-20)(25-15) + (15-20)(20-15) + \ldots + (30-20)(5-15)}{(10-20)^2 + (15-20)^2 + \ldots + (30-20)^2} \]
+    \[ \beta_0 = \bar{y} - \beta_1\bar{x} \]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Reasoning for Regression Analysis}
+  \begin{itemize}
+    \item Regression analysis helps us model and predict the relationship between variables.
+    \item For the given example, we calculated the regression coefficients (\(\beta_0\) and \(\beta_1\)) to represent the relationship between two variables.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise for Students}
+  \begin{enumerate}
+    \item Calculate the correlation coefficient (\(r\)) for two variables in a given dataset.
+    \item Perform simple linear regression for a set of variables and interpret the results.
+    \item Discuss scenarios where correlation and regression analysis are valuable in making predictions.
+  \end{enumerate}
+\end{frame}

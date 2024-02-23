@@ -1,0 +1,16 @@
+[
+  {
+    "number": 1,
+    "name": "Electromagnetism",
+    "nested_buttons": [{"name": "Electrostatics","links":[{"name":"Columbs Law","url":"Physics/Electromagnetism/gar/columbs.pdf"},{"name":"Biosavart Law","url":"Physics/Electromagnetism/gar/biosavart.pdf"}]}]
+  },
+  {
+    "number": 2,
+    "name": "Mechanics",
+    "nested_buttons": [
+      {"name": "All", "links": [{ "name": "Link 5", "url": "Physics/MN-1.pdf" }]}
+    ]
+  }
+]
+
+

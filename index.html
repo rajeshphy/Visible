@@ -1,0 +1,103 @@
+<!-- FILEPATH: /Users/rajeshkumar/XXX/GIT/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .wrap {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quart {
+      position: absolute;
+      height: 50%;
+      width: 50%;
+      background: tomato;
+      transition: all 0.4s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: black;
+      cursor: pointer;
+      border: 2px solid white; /* Added border to create lines between segments */
+    }
+
+    .quart:first-child {
+      top: 0;
+      left: 0;
+    }
+
+    .quart:nth-child(2) {
+      top: 0;
+      left: 50%;
+    }
+
+    .quart:nth-child(3) {
+      top: 50%;
+      left: 0;
+    }
+
+    .quart:nth-child(4) {
+      top: 50%;
+      left: 50%;
+    }
+
+    .center {
+      height: 40%;
+      width: 40%;
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      font-size: 24px;
+      background: lightgray;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 120px;
+      cursor: pointer;
+      transition: background 0.4s; /* Added transition for smooth color change */
+    }
+
+    .center:hover {
+      background: dimgray;
+    }
+
+    .quart:hover {
+      background: dimgray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="quart" onclick="redirectToSite('file:///Users/rajeshkumar/XXX/GIT/trackerD.html')">Desktop</div>
+    <div class="quart" onclick="redirectToSite('https://rajeshphy.github.io/Visible/tracker.html')">GIT-V</div>
+    <div class="quart" onclick="redirectToSite('https://github.com/rajeshphy/Private/blob/main/tracker.md')">GIT-P</div>
+    <div class="quart" onclick="redirectToSite('https://sites.google.com/view/rajesh-phyz')">Notes</div>
+    <div class="center" onclick="redirectToSite('https://www.ias.ac.in/listing/issues/reso')">Journal</div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    function redirectToSite(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+
+</html>
