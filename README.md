@@ -37,6 +37,12 @@ Finally, push your local changes to the remote repository with the following com
 git push -u origin main
 ```
 
+### When error is encountered: RPC failed; HTTP 400 curl 22
+If you encounter an error while pushing changes to the remote repository, you can try increasing the buffer size for HTTP post requests using the following command:
+```bash
+git config --global http.postBuffer 524288000
+```
+
 ### Additional Note: Authentication
 
 If prompted for a username and password, use your GitHub username for the username field. For the password, generate a personal access token from the Developer Settings on GitHub. This token will serve as your password for authentication.
