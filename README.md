@@ -43,6 +43,20 @@ If you encounter an error while pushing changes to the remote repository, you ca
 git config --global http.postBuffer 524288000
 ```
 
+### Install git-filter-repo (if needed)
+
+```bash
+brew install git-filter-repo
+```
+
+### Remove a file from git history
+
+```bash
+git filter-repo --path Folder-Inside-Repo/ABC --invert-paths
+```
+
+
+
 ### Additional Note: Authentication
 
 If prompted for a username and password, use your GitHub username for the username field. For the password, generate a personal access token from the Developer Settings on GitHub. This token will serve as your password for authentication.
