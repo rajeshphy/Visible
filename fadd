@@ -1,6 +1,7 @@
 *.txt
 *.tex
 *.pdf
+*.PDF
 *.html
 *.md
 *.py
